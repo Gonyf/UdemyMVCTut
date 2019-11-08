@@ -54,9 +54,7 @@ namespace UdemyApp.API.Controllers
             var userfromRepo = await _repo.Login(userForLoginDTO.Username, userForLoginDTO.Password);
 
             if (userfromRepo == null)
-            {
                 return Unauthorized();
-            }
 
             var claims = new[]
             {
